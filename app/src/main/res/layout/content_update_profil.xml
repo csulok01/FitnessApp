@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="6"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/Cel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cel"
+            android:textColor="#FFFCFC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/celszerkeszt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@android:color/holo_blue_dark"
+            android:hint="@string/c_l_megad_sa"
+            android:textColorHint="@color/lightBlue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Cel"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="setGoalAlertDialog"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/kor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eletkor"
+            android:textColor="#FFFCFC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/korszerkeszt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColorHint="@color/lightBlue"
+            android:textColor="@color/lightBlue"
+            android:hint="@string/kor_megad_sa"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/kor"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/nem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/neme"
+            android:textColor="#FFFCFC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/nemszerkeszt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@android:color/holo_blue_dark"
+            android:hint="@string/nem_megad_sa"
+            android:textColorHint="@color/lightBlue"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nem"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="setGenderAlertDialog"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/magassag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/magass_g"
+            android:textColor="#FFFCFC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/magassagszerkeszt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textColorHint="@color/lightBlue"
+            android:hint="@string/magass_g_megad_sa"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/magassag"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/suly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="suly: "
+            android:textColor="#FFFCFC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/sulyszerkeszt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@android:color/holo_blue_dark"
+            android:hint="@string/s_ly_megad_sa"
+            android:textColorHint="@color/lightBlue"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/suly"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/ment_s"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="16dp"
+        android:textColor="@color/lightBlue"
+        android:layout_weight="1"
+        android:onClick="saveProfilData"/>
+
+</LinearLayout>

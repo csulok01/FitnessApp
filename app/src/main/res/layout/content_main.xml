@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/progressView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_layout"
+        android:onClick="onMainMenuButtonClicked"
+        android:orientation="vertical"
+        android:weightSum="7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <TextView
+                android:id="@+id/calorieText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="@string/kaloria"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/lightBlue"
+                tools:ignore="NestedWeights,RtlCompat" />
+
+            <ProgressBar
+                android:id="@+id/calorieProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:progress="50"
+                tools:ignore="NestedWeights" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/carboHydrate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:text="@string/szenhidratok"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightBlue"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/protein"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:text="@string/feherje"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightBlue"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/fat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:text="@string/zsir"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightBlue"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ProgressBar
+                    android:id="@+id/carboHydrateProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:progress="50" />
+
+                <ProgressBar
+                    android:id="@+id/proteinProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:progress="50" />
+
+                <ProgressBar
+                    android:id="@+id/fatProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:progress="50" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/waterText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/v_z"
+                android:textAlignment="center"
+                android:textColor="@color/lightBlue"
+                tools:ignore="NestedWeights,RtlCompat" />
+
+            <ProgressBar
+                android:id="@+id/waterProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                tools:ignore="NestedWeights" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/weightText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="súly: "
+                android:textAlignment="center"
+                android:textColor="@color/lightBlue"
+                tools:ignore="NestedWeights,RtlCompat" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addMealButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gunMetal"
+                        android:onClick="onMainMenuButtonClicked"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout"
+                            android:orientation="vertical"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:id="@+id/cardViewDinnerPicture"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/dish_spoon_knife" />
+
+                            <TextView
+                                android:id="@+id/cardViewDinnerText"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="@string/taplalkozas"
+                                android:textAlignment="center"
+                                android:textColor="@color/lightBlue" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/showStatisticsButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gunMetal"
+                        android:onClick="onMainMenuButtonClicked"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout"
+                            android:orientation="vertical"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:id="@+id/cardViewRequirementsPicture"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/chart_arrow_up" />
+
+                            <TextView
+                                android:id="@+id/cardviewRequirementsText"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="STATISZTIKA"
+                                android:textAlignment="center"
+                                android:textColor="@color/lightBlue" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addPhotoButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gunMetal"
+                        android:onClick="onMainMenuButtonClicked"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout"
+                            android:orientation="vertical"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:id="@+id/cardViewTakePhotoPicture"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/edit_list" />
+
+                            <TextView
+                                android:id="@+id/cardviewTakePhotoText"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="nap törlése"
+                                android:textAlignment="center"
+                                android:textColor="@color/lightBlue" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addPlanButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gunMetal"
+                        android:onClick="onMainMenuButtonClicked"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout"
+                            android:orientation="vertical"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:id="@+id/cardViewWaterPicture"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/body_weight_scales" />
+
+                            <TextView
+                                android:id="@+id/cardviewWaterText"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="mai súly"
+                                android:textAlignment="center"
+                                android:textColor="@color/lightBlue" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addSportButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gunMetal"
+                        android:onClick="onMainMenuButtonClicked"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout"
+                            android:orientation="vertical"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:id="@+id/cardViewSportHeartPicture"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/gym_workout_treadmill" />
+
+                            <TextView
+                                android:id="@+id/cardviewSportHeartText"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="@string/testmozgas"
+                                android:textAlignment="center"
+                                android:textColor="@color/lightBlue" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addWaterButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gunMetal"
+                        android:onClick="onMainMenuButtonClicked"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout"
+                            android:orientation="vertical"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:id="@+id/cardViewPlanrPicture"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/cola_drink_plastic" />
+
+                            <TextView
+                                android:id="@+id/cardviewPlanText"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="@string/vizmennyiseg_rogzitese"
+                                android:textAlignment="center"
+                                android:textColor="@color/lightBlue" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

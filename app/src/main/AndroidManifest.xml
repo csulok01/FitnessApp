@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fitnessapp">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".GraphActivity"
+            android:label="statisztika"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ActivitiesListActivity"
+            android:label="mai tevékenységeid"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".SelectedSportDetails"
+            android:label="Sport adatok"
+            android:parentActivityName=".SportListActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".SelectedFoodDetails"
+            android:label="Étel adatok"
+            android:parentActivityName=".FoodListActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".UpdateProfilActivity"
+            android:label="Profil szerkesztése"
+            android:parentActivityName=".ProfilActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".AddSportActivity"
+            android:label="sport hozzáadása az adatbázishoz"
+            android:parentActivityName=".SportListActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".SportListActivity"
+            android:label="Sport lista"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".AddFoodActivity"
+            android:label="@string/etel_hozzaadas_az_adatbazishoz"
+            android:parentActivityName=".FoodListActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".FoodListActivity"
+            android:label="@string/Etel_lista"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".ProfilActivity"
+            android:label="@string/profil"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".CalendarActivity"
+            android:label="@string/Calendar"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
