@@ -415,5 +415,13 @@ public class MainActivity extends AppCompatActivity {
         return CalendarDay.today().getYear() + "-" + dateMonth + "-" + dateDay;
     }
 
+    public void onTakePhotoButtonClicked(View view){
+        if(getTodayDate().equals(currentDate)) {
+            Intent cameraIntent = new Intent(this, cameraActivity.class);
+            startActivityForResult(cameraIntent, 2);
+        }else{
+            Toast.makeText(this,"csak a mai napra készíthetsz fotót!",Toast.LENGTH_LONG).show();
+        }
+    }
 
 }
