@@ -58,4 +58,9 @@
     <string name="date">date</string>
     <string name="aktivitas">aktivitás</string>
     <string name="v_z">víz</string>
+    <string name="fenykep_keszites">FÉNYKÉP KÉSZités</string>
+    <string name="suly">súly:</string>
+    <string name="statisztika">STATISZTIKA</string>
+    <string name="nap_t_rl_se">nap törlése</string>
+    <string name="mai_s_ly">mai súly</string>
 </resources>
